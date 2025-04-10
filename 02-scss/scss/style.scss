@@ -1,0 +1,40 @@
+$primarycolor: rgb(75, 75, 170);
+$sizes: 10, 20, 50, 100;
+
+@each $size in $sizes {
+    .div-#{$size} {
+      height: #{$size}px;
+      width: #{$size}px;
+    }
+  }
+
+
+
+@mixin border{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+    color: $primarycolor;
+}
+h2{
+    color: $primarycolor;
+}
+
+.unterbox{
+    & .box{
+        color: green;
+    }
+    & h2{
+        color: yellow;
+    }
+
+    &.box{
+        @include border;
+        color: blue;
+    }
+}
+

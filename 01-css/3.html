@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 0.5s, height 0.5s, background-color 5s;
+        }
+        #box:hover{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(43, 226, 83);
+
+        }
+        button{
+            background: red;
+            border-color: red;
+            border-radius: 5px;
+            padding: 4px;
+            color: white;
+            position: absolute;
+            top: 150px;
+            left: 10px;
+            transition: background-color 0.5s, left 5s;
+        }
+        button:hover{
+            background-color: rgb(238, 87, 87);
+            left: 80px;
+       
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Hallo</div>
+    <br>
+    <button>bestellen</button>
+</body>
+</html>
