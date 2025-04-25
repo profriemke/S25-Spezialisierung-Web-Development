@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="summand1"> +
+    <input type="text" id="summand2"> 
+    <button onclick="add()">=</button>
+    <span id="ergebnis">0</span>
+<script>
+
+    function add(){
+        const summand1 = document.getElementById('summand1')
+        const summand2 = document.getElementById('summand2')
+        const ergebnis = document.getElementById('ergebnis')
+        
+        let summe = parseInt(summand1.value) + parseInt(summand2.value)
+        ergebnis.innerText = summe
+    }
+</script>
+</body>
+</html>

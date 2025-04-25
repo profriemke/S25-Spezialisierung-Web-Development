@@ -18,6 +18,35 @@
   width: 100px;
 }
 
+.div-200 {
+  height: 200px;
+  width: 200px;
+}
+
+.color-brown {
+  background-color: brown;
+}
+
+.color-green {
+  background-color: green;
+}
+
+.color-purple {
+  background-color: purple;
+}
+
+.color-wheat {
+  background-color: wheat;
+}
+
+.color-red {
+  background-color: red;
+}
+
+.color-green {
+  background-color: green;
+}
+
 h1 {
   color: rgb(75, 75, 170);
 }
@@ -27,7 +56,7 @@ h2 {
 }
 
 .unterbox .box {
-  color: green;
+  color: red;
 }
 .unterbox h2 {
   color: yellow;

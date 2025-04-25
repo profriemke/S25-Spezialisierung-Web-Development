@@ -1,5 +1,9 @@
 $primarycolor: rgb(75, 75, 170);
-$sizes: 10, 20, 50, 100;
+$boxencolor: red;
+$headingcolor: yellow;
+
+$sizes: 10, 20, 50, 100, 200;
+$colors: brown, green, purple, wheat, red, green;
 
 @each $size in $sizes {
     .div-#{$size} {
@@ -7,7 +11,11 @@ $sizes: 10, 20, 50, 100;
       width: #{$size}px;
     }
   }
-
+@each $color in $colors{
+    .color-#{$color} {
+        background-color: #{$color};
+    }
+}
 
 
 @mixin border{
@@ -25,11 +33,11 @@ h2{
 }
 
 .unterbox{
-    & .box{
-        color: green;
+    .box{
+        color: $boxencolor;
     }
-    & h2{
-        color: yellow;
+    h2{
+        color: $headingcolor;
     }
 
     &.box{
