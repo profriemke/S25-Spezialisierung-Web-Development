@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+    <button onclick="neu()">Neu</button>
+<script>
+    function neu(){
+        let neuesDiv = document.createElement('div')
+        let contentDiv = document.getElementById('content')
+    
+        neuesDiv.innerText='ich bin das div'
+        neuesDiv.style.width="280px";
+        neuesDiv.style.height="80px"
+        neuesDiv.style.backgroundColor='red'
+
+        contentDiv.appendChild(neuesDiv)
+    }    
+</script>
+
+</body>
+</html>

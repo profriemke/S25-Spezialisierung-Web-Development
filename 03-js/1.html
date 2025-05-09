@@ -12,13 +12,22 @@
     <span id="ergebnis">0</span>
 <script>
 
+    // const summand1 = document.getElementById('summand1')
+    // summand1.value= 25
+    
+    
     function add(){
         const summand1 = document.getElementById('summand1')
         const summand2 = document.getElementById('summand2')
         const ergebnis = document.getElementById('ergebnis')
-        
+       
+
         let summe = parseInt(summand1.value) + parseInt(summand2.value)
+        if(isNaN(summe)){
+            ergebnis.innerText =0
+        }else{
         ergebnis.innerText = summe
+        }
     }
 </script>
 </body>

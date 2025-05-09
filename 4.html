@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .show{
+            visibility: visible;
+        }
+        .hide{
+            visibility: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box" class="show"></div>
+    <button id="aus">aus</button>
+    <button onclick="einblenden()">ein</button>
+    <script>
+        window.addEventListener('keydown', (e)=>{
+            const box = document.getElementById('box')
+            box.innerText = e.key
+        })
+
+        const aus = document.getElementById('aus')
+        aus.addEventListener('click', function (){
+            const box = document.getElementById('box')
+            box.classList.remove('show')
+            box.classList.add('hide')
+        })
+        function einblenden(){
+            const box = document.getElementById('box')
+            box.classList.remove('hide')
+            box.classList.add('show')
+        }
+    </script>
+</body>
+</html>

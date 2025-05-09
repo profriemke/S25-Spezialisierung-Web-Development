@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #playground{
+            width: 300px;
+            height: 200px;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        #racket{
+            width: 10px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            top:10px;
+        }
+        #ball{
+            width:7px;
+            height: 7px;
+            background-color: red;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            border-radius: 60%;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="playground"></div>
+    <div id="racket"></div>
+    <div id="ball"></div>
+    <script>
+        // Racket
+        let racketY = 10
+        let ballX = 150
+        let ballY = 150
+        let ballStepX = 3
+        let ballStepY = 3
+        const racketStep = 3
+        const racket = document.getElementById('racket')
+        const ball = document.getElementById('ball')
+        window.setInterval(()=>{
+            if(ballX + ballStepX > 300){
+                ballStepX = -1*ballStepX
+            }
+            ballX = ballX + ballStepX
+            ball.style.left = ballX+'px'
+            
+            if( ballY + ballStepY > 200){
+                ballStepY = -1 * ballStepY
+            }
+            if( ballY + ballStepY < 8){
+                ballStepY = -1 * ballStepY
+            }
+            ballY = ballY + ballStepY
+            ball.style.top  =ballY+ 'px'
+            if(ballX <= 20){
+                if(ballY > racketY && ballY < racketY + 40){
+                    ballStepX = -1* ballStepX
+                    ballStepY = -1* ballStepY
+                }
+            }
+            if(ballX<0){
+                alert('Verloren, ätsch')
+            }
+        },50)
+  
+  
+        window.addEventListener('keydown', (e)=>{
+            console.log(e.key)
+            if(e.key=='ArrowDown'){
+                if(racketY + racketStep > 170){
+                    return
+                }
+                racketY = racketY + racketStep
+                racket.style.top = racketY+'px'
+            }
+            if(e.key == 'ArrowUp'){
+                if(racketY - racketStep < 8){
+                    return
+                }
+                racketY = racketY - racketStep
+                racket.style.top = racketY+'px'
+            }
+
+        })
+
+    </script>
+</body>
+</html>
