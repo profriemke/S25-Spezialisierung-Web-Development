@@ -1,8 +1,8 @@
 'use client'
-import Gruss from '@/components/Gruss'
+import Gruss from '../components/Gruss'
 import Link from 'next/link'
-import Navigation from '@/components/Navigation'
-import Addiere from '@/components/Addiere'
+import Navigation from '../components/Navigation'
+import Addiere from '../components/Addiere'
 export default function Home() {
   return (
     <div>

@@ -20,9 +20,9 @@ export default function AddNote(props){
     }
    if(mode=='form'){
     return(
-        <div>
+        <div className="border-1">
             Du hast eingegeben:{note}<br/>
-            <input value={note} onChange={changeNote}/>
+            <input value={note} onChange={changeNote} className="border-2 rounded m-2"/>
             <button onClick={()=>{handleClick()}}>hinzufügen</button>
         </div>
     )
